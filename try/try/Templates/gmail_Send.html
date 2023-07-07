@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block body %}
+
+<form method="post"> {% csrf_token %}
+<div class="container my-3">
+  <div class="mb-3">
+    <label class="form-label" 
+      >Subject</label
+    >
+    <textarea
+      class="form-control"
+      name="subject"
+      id="exampleFormControlTextarea1"
+      rows="3"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label class="form-label"
+      >Massege</label
+    >
+    <textarea
+      class="form-control"
+      name="message"
+      id="exampleFormControlTextarea1"
+      rows="3"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"
+      >To Send Email</label
+    >
+    <input
+      type="email"
+      class="form-control"
+      name="to_email"
+      placeholder="name@example.com"
+    />
+  </div>
+<button type="submit" class="btn btn-info">Send Mail</button>
+</div>
+</form>
+
+{% endblock %}

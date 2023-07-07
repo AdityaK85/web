@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+    <head>
+        <title>{{data}}</title>
+        <style>
+            .main{
+                width:1000px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        {{request}}
+        {% comment %} <div class='main'><h2>{{how}}</h2></div> {% endcomment %}
+        <h2>Student Data</h2>
+        {% comment %} {% for i in how %} 
+            {{ forloop.last }}
+            {{i}} 
+        {% endfor %} {% endcomment %}
+        
+            <table border="2" cellpadding="10">
+                <tr>
+                    <th>Name</th>
+                    <th>Stream</th>
+                </tr>
+
+                {% for s in stu %}
+                <tr>
+                    <td>{{forloop.counter}} {{s.Name}}</td>
+                    <td>{{s.course}}</td>    
+                </tr>
+                {% endfor %} 
+            </table>
+
+            {% if table|length > 0 %}
+                {% for i in table %}
+                    <div>{{i}}</div><br>
+                {% endfor %}
+            {% else %}
+                No Data Found
+            {% endif %}
+        <a href = {% url 'about' %} >Go throgh Url Method</a><br>
+        <a href = "about/">Go Direct Method</a><br>
+               
+
+
+
+            <img src= {% static 'car.jpg' %} width="600px" height="400px">
+        
+    </body>
+</html>

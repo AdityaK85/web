@@ -1,0 +1,66 @@
+<!-- {% extends 'base.html' %} {% block body %}  -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'assets/css/app.min.css' %}  " />
+<link
+  rel="stylesheet"
+  href="{% static 'assets/bundles/bootstrap-daterangepicker/daterangepicker.css' %}  "
+/>
+<link
+  rel="stylesheet"
+  href="{% static 'assets/bundles/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css' %}  "
+/>
+<link
+  rel="stylesheet"
+  href="{% static 'assets/bundles/select2/dist/css/select2.min.css' %}  "
+/>
+<link
+  rel="stylesheet"
+  href="{% static 'assets/bundles/jquery-selectric/selectric.css' %}  "
+/>
+<link
+  rel="stylesheet"
+  href="{% static 'assets/bundles/bootstrap-timepicker/css/bootstrap-timepicker.min.css' %}  "
+/>
+<link
+  rel="stylesheet"
+  href="{% static 'assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.css' %}  "
+/>
+<!-- Template CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}  " />
+<link rel="stylesheet" href="{% static 'assets/css/components.css' %}  " />
+<!-- Custom style CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/custom.css' %}  " />
+<div class="container">
+  <form action="/send_multiple/" method="post">
+  <div class="form-group">
+    <label>Subjects</label>
+    <select name="select" id="select" class="form-control select2" multiple="multiple">
+      <option value="python">python</option>
+      <option value="java">java</option>
+      <option value="php">php</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-success" > Submit</button>
+</form>
+</div>
+
+<script src="{% static 'assets/js/app.min.js' %} "></script>
+<script src="{% static 'assets/bundles/cleave-js/dist/cleave.min.js' %} "></script>
+<script src="{% static 'assets/bundles/cleave-js/dist/addons/cleave-phone.us.js' %} "></script>
+<script src="{% static 'assets/bundles/jquery-pwstrength/jquery.pwstrength.min.js' %} "></script>
+<script src="{% static 'assets/bundles/bootstrap-daterangepicker/daterangepicker.js' %} "></script>
+<script src="{% static 'assets/bundles/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js' %} "></script>
+<script src="{% static 'assets/bundles/bootstrap-timepicker/js/bootstrap-timepicker.min.js' %} "></script>
+<script src="{% static 'assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js' %} "></script>
+<script src="{% static 'assets/bundles/select2/dist/js/select2.full.min.js' %} "></script>
+<script src="{% static 'assets/bundles/jquery-selectric/jquery.selectric.min.js' %} "></script>
+<script src="{% static 'assets/js/page/forms-advanced-forms.js' %} "></script>
+<script src="{% static 'assets/js/scripts.js' %} "></script>
+<script src="{% static 'assets/js/custom.js' %} "></script>
+<!-- 
+<script>
+  $("select").selectpicker();
+</script>
+{% endblock %} -->
+
+</script>

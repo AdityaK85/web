@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div id="message" ></div>
+<script type="text/javascript">
+	// for (let i = 0; i < 100;) 
+	// 	document.write((++i % 3 ? "":"fizz") + ( i % 5 ? "" : "buzz") || i)
+ids.forEach(async (id) => {
+    const axios require("axios");
+    ListForData.push(result.data);
+ });
+ ListForData.forEach((item) console.log(item));
+
+async function getDataForEach(ids) { 
+    ListForData = [];
+    for (i = 0; i < ids.length; i++) {
+        const result = await axios.get("https://regbin.com/echo/get/json"); 
+        ListForData.push(result.data);
+    }
+    ListForData.forEach((item) console.log(item));
+} 
+getDataFor([1, 2, 31]).then(console.log("done")); 
+getDataForEach([1, 2, 31]).then(console.log("done"));
+</script>
+</body>
+</html>

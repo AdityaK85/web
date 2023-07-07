@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class= "container">
+<center><h2 class=my-3>{{id.title}}</h2></center>
+<br>
+
+<img src = "/media/{{id.upl_img}}">
+
+{{id.news_desc | safe}}
+
+</div>
+
+
+
+{% endblock %}

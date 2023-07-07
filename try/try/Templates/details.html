@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form action= {% url 'details' %} method='post'>   {% csrf_token %}
+<div class= "container my-4">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"><h3>Name</h3></label>
+    <input type="text" class="form-control" name= "name" id="1" placeholder="Enter your Name">
+  </div>
+
+
+  <label for="exampleFormControlInput1" class="form-label"><h3>Subjects </h3></label>
+  <select class="form-select" name='subject' aria-label="Default select example">
+    <option selected>select Your Subject</option>
+    <option value="1">Vb.Net</option>
+    <option value="2">Java</option>
+    <option value="3">SAD</option>
+    <option value="3">Cost A/C</option>
+    <option value="3">PHP</option>
+    <option value="3">My-Sqli</option>
+    <option value="3">Python</option>
+  </select>
+
+
+  <label for="exampleFormControlInput1" class="form-label my-2"><h3>Course </h3></label>
+  <select class="form-select" name='course' aria-label="Default select example">
+    <option selected >Your Course</option>
+    <option value="1">Bachelor of Commerce in Computer Applications</option>
+    <option value="2">Bachelor of Business Administration</option>
+    <option value="3">Bachelor of Commerce</option>
+    <option value="3">Bachelor of Arts</option>
+
+    <div class= "form-control">
+        <label> year</label>
+        <input type='text' name = 'year' placeholder="Enter your Year">
+    </div>
+
+    
+    <button type="submit" class="btn btn-danger" >submit</button>
+  
+</div>
+
+
+
+
+</form>
+
+{% endblock %}

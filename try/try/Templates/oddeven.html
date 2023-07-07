@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+<center><h2 class= "my-2">Even Odd </h2></center>
+<form method="post" action= {% url 'evenodd' %}>
+    {% csrf_token %}
+    <div class= container my-3>
+        {% if error %}
+        <div class="alert alert-warning" role="alert">
+            Invalid Input Please Enter a valid Number and Try Again
+          </div>
+        {% endif %}
+        <div class= "my-4">
+        <label class="">Enter  Value</label>
+        <input class = "form-control" type = "text" name = "num" value = {{n1}}><br>
+        <button type ="submit" class = "btn btn-danger my-3" name= "submit" >Check Even Or odd</button>
+        <br>
+        <label >Output</label>
+        <input class = "form-control my-2" type = "text" name = "out" value = {{c}}>
+    </div>
+</div>
+</form>
+{% endblock %}

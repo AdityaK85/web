@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>form Work make Data Model form Django Forms</h1>
+            <form method= "post" >
+                {% csrf_token %}
+                {{data}}
+                <button type= "submit"  name = "submit">Submit</button><br><br>
+                <label>Output</lable>
+                <input type= "text" value= ""><br>
+            </form>
+    </body>
+</html>                                                                                                                         

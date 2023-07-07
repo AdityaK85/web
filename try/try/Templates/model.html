@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block body  %}
+
+
+
+{% for i in sendData  %}
+
+<div class= "container my-3">
+  <div class="card mb-4 rounded-3 shadow-sm ">
+    <div class="card-body">
+      <small class="text-muted fw-light">Mrs</small><h1 class="card-title pricing-card-title">{{i.name}}</h1>
+      <ul class="list-unstyled mt-3 mb-4">
+        <li>Subject : {{i.subject}}</li>
+        <li>Course : {{i.course}}</li>
+        <li>Year : {{i.year}}</li>
+      </ul>
+      <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+    </div>
+  </div>
+</div>
+
+{% empty %}
+<div class="alert alert-warning" role="alert">
+  No Mataching Found
+</div>
+
+{% endfor %}
+
+<div class="alert alert-warning">
+  {{total_page}}
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    {% if sendData.has_previous %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ sendData.previous_page_number }}">Previous</a>
+    </li>
+    {% endif %}
+
+    {% for n in total_page %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{n}}">{{n}}</a>
+    </li>
+    {% endfor %}
+
+    {% if sendData.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ sendData.next_page_number }}">Next</a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+
+{% endblock %}

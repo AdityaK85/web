@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>   
+    </head>
+    <body><h1>Post Method</h1>
+        <form method = "post" action = "/output/">
+            {% csrf_token %}
+                <label>Number 1</lable>
+                    <input type= "text" name= "num1"><br><br>
+                <label>Number 2</lable>
+                    <input type= "text" name= "num2"><br>
+                <button type= "submit"  name = "submit">Submit</button><br><br>
+                <label>Output</lable>
+                    <input type= "text" value= {{total}}><br>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+<h2><b>Marksheet percentage</h2><br>
+<form method="post" action={% url 'marksheet' %}>
+    {% csrf_token %}
+    <label>Vb.Net </label>
+    <input type="text" name="vb">
+    <label>Tally Erp9 </label>
+    <input type="text" name="tally">
+    <label>Cost Ac </label>
+    <input type="text" name="cost">
+    <label>S.A.D </label>
+    <input type="text" name="sad">
+</div>
+
+<div class="container my-3  ">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Subjects</th>
+        <th scope="col">Vb.Net</th>
+        <th scope="col">Tally Erp9</th>
+        <th scope="col">Cost Ac</th>
+        <th scope="col">S.A.D</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Marks</th>
+        <td>{{vb}}/100</td>
+        <td>{{tally}}/100</td>
+        <td>{{cost}}/100</td>
+        <td>{{sad}}/100</td>
+      </tr>
+    </tbody>  
+  </table>
+  <button type = "submit" class = "btn btn-primary">Calulate</button>
+  <label><b>percentage<b></label>
+      <input text= "text" name= "perc" value={{perc}}%>
+</div>
+</form>
+{% endblock  %}
